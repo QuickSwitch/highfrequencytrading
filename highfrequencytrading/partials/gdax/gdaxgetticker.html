@@ -1,0 +1,94 @@
+
+<div class="breadcrumbs" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#">Home</a>
+		</li>
+		<li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#/dashboard">Dashboard</a>
+		</li>
+		<li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#/bittrex">GDAX</a>
+		</li>
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#/gdaxgetmarkets">Maket</a>
+        </li>
+        <li class="active">{{product}} Get Ticker</li>
+	</ul>
+</div>
+<div class="page-content">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-10 col-sm-offset-1">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                            <i class="icon-coffee green"></i>
+                           GDAX {{market}} Get Ticker
+						</h4>
+                       <table id="" class="table table-bordered table-striped table-condensed table-responsive">
+							<tr>
+								<td>
+                                    <label>Price</label>
+                                    <span></span>
+								</td>
+                                <td>
+                                    <label>Size</label>
+                                    <span></span>
+								</td>
+								<td>
+                                    <label>Bid</label>
+                                    <span></span>
+								</td>
+                                <td>
+                                    <label>Ask</label>
+                                    <span></span>
+                                </td>
+                                <td>
+                                    <label>Volume</label>
+                                    <span></span>
+                                </td>
+							
+							</tr>
+                            <tr>
+                                <td>
+                                    <label>{{getresult.price}}</label>
+                                    <span></span>
+								</td> 
+								<td>
+                                    <label>{{getresult.size}}</label>
+                                    <span></span>
+								</td> 
+								<td>
+                                    <label>{{getresult.bid}}</label>
+                                    <span></span>
+								</td> 
+
+                                <td>
+                                    <label>{{getresult.ask}}</label>
+                                    <span></span>
+                                </td> 
+
+                                <td>
+                                    <label>{{getresult.volume}}</label>
+                                    <span></span>
+                                </td>
+								
+                               
+                            
+							</tr> 
+                           
+						</table>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.page-content -->

@@ -1,0 +1,165 @@
+<div class="breadcrumbs" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li class="active">My Account</li>
+    </ul>
+</div>
+<div class="page-content">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-6 col-sm-offset-1">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                            Update account for  Haryana Swarna Jayanti
+                        </h4>
+                        <br/>
+                        <form name="accountForm" class="form-horizontal" role="form">
+                            <input type="hidden" class="form-control" placeholder="Brass Band Id" name="brassband_id" ng-model="account.brassband_id" />
+                            <input type="hidden" class="form-control" placeholder="Brass Band Category" name="brassband_category" ng-model="account.brassband_category" />
+                           
+
+                            <div class="form-group" ng-if="account.brassband_category == 'State Level Brass Band Competition'" id="type1">
+                                <label class="col-md-5 control-label" for="selectbasic">Brass Band Type</label>
+                                <div class="col-md-7">
+                                    <select id="selectbasic" name="brassband_type_1" class="form-control input-md" ng-model="account.brassband_type">
+                                        <option value="">----Select Type----</option>
+                                        <option value="Armed force">Armed force</option>
+                                        <option value="Police">Police</option>
+                                        <option value="Paramilitary Bands">Paramilitary Bands</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-if="account.brassband_category == 'District Level School Band Competition'" id="type2">
+                                <label class="col-md-5 control-label" for="selectbasic">Brass Band Type</label>
+                                <div class="col-md-7">
+                                    <select id="selectbasic" name="brassband_type_2" class="form-control input-md" ng-model="account.brassband_type">
+                                        <option value="">----Select Type----</option>
+                                        <option value="State Govt.">State Govt.</option>
+                                        <option value="Central Govt.">Central Govt.</option>
+                                        <option value="Private">Private</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="name">Name</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" name="brassband_name" placeholder="Name" ng-model="account.brassband_name" required focus/>
+                                        <span ng-show="accountForm.brassband_name.$invalid" class="help-inline">Name can not be empty</span> 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="brassband_email">Email</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Email" name="email" ng-model="account.brassband_email" required focus/>
+                                        <span ng-show="accountForm.brassband_email.$error.email" class="help-inline">Email is not valid</span> 
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="address">Address</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <textarea rows="4" cols="50" ng-model="account.brassband_address" placeholder="Address"></textarea>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="District">District</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" name="brassband_district" placeholder="Enter District" ng-model="account.brassband_district" required focus/>
+                                        <span ng-show="accountForm.brassband_district.$invalid" class="help-inline">District can not be empty</span> 
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="Pincode">Pincode</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" name="brassband_pin" placeholder="Enter District" ng-model="account.brassband_pin" />
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="brassband_mobile">Mobile Number</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Enter Mobile Number" name="brassband_mobile" ng-model="account.brassband_mobile"/>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label no-padding-right" for="brassband_fax">Fax Number</label>
+                                <div class="col-sm-7">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="Enter Fax Number" name="brassband_fax" ng-model="account.brassband_fax"/>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <label class="col-sm-5 control-label no-padding-right" for="brassband_songchoice"> Choice of Patriotic Songs</label>
+                                <div class="col-sm-7">
+                                   
+                                    <input type="button" class="btn btn-info" ng-click="addNewChoice()" value="+">
+                                    <fieldset data-ng-repeat="field in account.brassband_songchoice track by $index">
+
+                                        <input type="text" class="form-control" placeholder="Enter Song" name="brassband_songchoice" ng-model="account.brassband_songchoice[$index]"/>
+
+                                        <button type="button" class="btn btn-default btn-sm" ng-click="removeChoice($index)">
+                                            <span class="glyphicon glyphicon-minus"></span>
+                                        </button>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <label class="col-sm-5 control-label no-padding-right" for="brassband_contact_person_name"> Contact Person</label>
+                                <div class="col-sm-7">
+                                    <input type="button" class="btn btn-info" ng-click="addNewContactPerson()" value="+">
+                                    <fieldset data-ng-repeat="field in account.brassband_contact_person_name track by $index">
+
+                                        <input type="text" class="form-control" placeholder="Enter Contact Person Name" name="brassband_contact_person_name" ng-model="account.brassband_contact_person_name[$index]"/>
+                                        <input type="text" class="form-control" placeholder="Enter Song" name="brassband_contact_person_mobile" ng-model="account.brassband_contact_person_mobile[$index]"/>
+                                        <button type="button" class="btn btn-default btn-sm" ng-click="removeContactPerson($index)">
+                                            <span class="glyphicon glyphicon-minus"></span>
+                                        </button>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="lbl col-sm-5"> </span>
+                                <div class="col-sm-7">
+                                    <button type="submit" class="width-35 pull-right btn btn-sm btn-primary" ng-click="accountUp(account)" data-ng-disabled="accountForm.$invalid">
+                                       Update Account
+                                    </button>
+                                </div>
+                            </div>
+
+                            <span class="lbl col-sm-5"> </span>
+                            <div class="col-sm-7">Already have an account? <a href="#/login">SignIn</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /.page-content -->

@@ -1,0 +1,138 @@
+
+<div class="breadcrumbs" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#">Home</a>
+		</li>
+		<li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#/dashboard">Dashboard</a>
+		</li>
+		<li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#/bittrex">Bit Trex</a>
+		</li>
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#/bittrexgetmarkets">Market Data</a>
+        </li>
+        <li class="active">{{market}} Market Summary</li>
+	</ul>
+</div>
+<div class="page-content">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-10 col-sm-offset-1">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                            <i class="icon-coffee green"></i>
+                           Bit Trex {{market}} Market Summary
+						</h4>
+                       <table id="" class="table table-bordered table-striped table-condensed table-responsive">
+							<tr>
+								<td>
+                                    <label>Market Name</label>
+                                    <span></span>
+								</td>
+                                <td>
+                                    <label>High</label>
+                                    <span></span>
+								</td>
+								<td>
+                                    <label>Low</label>
+                                    <span></span>
+								</td>
+								<td>
+                                    <label>Volume</label>
+                                    <span></span>
+								</td>
+								<td>
+                                    <label>Last</label>
+                                    <span></span>
+								</td>
+                                <td>
+                                    <label>Base Volume</label>
+                                    <span></span>
+                                </td>
+                                 <td>
+                                    <label>Bid</label>
+                                    <span></span>
+                                </td>
+                                <td>
+                                    <label>Ask</label>
+                                    <span></span>
+                                </td>
+                                <td>
+                                    <label>Open Buy Orders</label>
+                                    <span></span>
+                                </td>
+                                <td>
+                                    <label>Open Sell Orders</label>
+                                    <span></span>
+                                </td>
+                                 <td>
+                                    <label>Prev. Day</label>
+                                    <span></span>
+                                </td>
+							</tr>
+                            <tr ng-repeat="bitmarketsm in getresult">
+                                <td>
+                                    <label>{{bitmarketsm.MarketName}}</label>
+                                    <span></span>
+								</td> 
+								<td>
+                                    <label>{{bitmarketsm.High}}</label>
+                                    <span></span>
+								</td> 
+								<td>
+                                    <label>{{bitmarketsm.Low}}</label>
+                                    <span></span>
+								</td> 
+								<td>
+                                    <label>{{bitmarketsm.Volume}}</label>
+                                    <span></span>
+								</td> 
+								<td>
+                                    <label>{{bitmarketsm.Last}}</label>
+                                    <span></span>
+								</td>
+                                <td>
+                                    <label>{{bitmarketsm.BaseVolume}}</label>
+                                    <span></span>
+                                </td>
+                                <td>
+                                    <label>{{bitmarketsm.Bid}}</label>
+                                    <span></span>
+                                </td>
+                                 <td>
+                                    <label>{{bitmarketsm.Ask}}</label>
+                                    <span></span>
+                                </td>
+                                <td>
+                                    <label>{{bitmarketsm.OpenBuyOrders}}</label>
+                                    <span></span>
+                                </td>
+                                <td>
+                                    <label>{{bitmarketsm.OpenSellOrders}}</label>
+                                    <span></span>
+                                </td>
+                                <td>
+                                    <label>{{bitmarketsm.PrevDay}}</label>
+                                    <span></span>
+                                </td>
+							</tr> 
+                            <tr>
+                             
+							</tr>
+						</table>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.page-content -->

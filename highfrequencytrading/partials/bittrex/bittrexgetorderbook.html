@@ -1,0 +1,156 @@
+
+<div class="breadcrumbs" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#">Home</a>
+		</li>
+		<li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#/dashboard">Dashboard</a>
+		</li>
+		<li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#/bittrex">Bit Trex</a>
+		</li>
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#/bittrexgetmarkets">Market Data</a>
+        </li>
+        <li class="active">{{market}} History</li>
+	</ul>
+</div>
+<div class="page-content">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-10 col-sm-offset-1">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                            <i class="icon-coffee green"></i>
+                           Bit Trex {{market}} Get order
+						</h4>
+                       <table id="" ng-if="type=='buy'" class="table table-bordered table-striped table-condensed table-responsive">
+							<tr>
+								<td>
+                                    <label>Quantity</label>
+                                    <span></span>
+								</td>
+                                <td>
+                                    <label>Rate</label>
+                                    <span></span>
+								</td>
+								
+                              
+
+							
+							</tr>
+                             <tr ng-repeat="bithistory in getresult">
+                                
+                                <td>
+                                    <label>{{bithistory.Quantity}}</label>
+                                    <span></span>
+                                </td> 
+                                <td>
+                                    <label>{{bithistory.Rate}}</label>
+                                    <span></span>
+                                </td> 
+                                
+                               
+                            </tr>
+                           
+						</table>
+                         <table id="" ng-if="type=='sell'" class="table table-bordered table-striped table-condensed table-responsive">
+                            <tr>
+                                <td>
+                                    <label>Quantity</label>
+                                    <span></span>
+                                </td>
+                                <td>
+                                    <label>Rate</label>
+                                    <span></span>
+                                </td>
+                                
+                              
+
+                            
+                            </tr>
+                             <tr ng-repeat="bithistory in getresult">
+                                
+                                <td>
+                                    <label>{{bithistory.Quantity}}</label>
+                                    <span></span>
+                                </td> 
+                                <td>
+                                    <label>{{bithistory.Rate}}</label>
+                                    <span></span>
+                                </td> 
+                                
+                               
+                            </tr>
+                           
+                        </table>
+                        <table id="" ng-if="type=='both'" class="table table-bordered table-striped table-condensed table-responsive">
+                            <tr>
+                                <td>
+                                    <label>Quantity</label>
+                                    <span></span>
+                                </td>
+                                <td>
+                                    <label>Rate</label>
+                                    <span></span>
+                                </td>
+                                <td>
+                                    <label>Buy/Sell</label>
+                                    <span></span>
+                                </td>
+                                
+                              
+
+                            
+                            </tr>
+                             <tr ng-repeat="bithistory in getresult.buy">
+                                
+                                <td>
+                                    <label>{{bithistory.Quantity}}</label>
+                                    <span></span>
+                                </td> 
+                                <td>
+                                    <label>{{bithistory.Rate}}</label>
+                                    <span></span>
+                                </td> 
+                                 <td>
+                                    <label>Buy</label>
+                                    <span></span>
+                                </td>
+                                
+                               
+                            </tr>
+                            <tr ng-repeat="bithistory in getresult.sell">
+                                
+                                <td>
+                                    <label>{{bithistory.Quantity}}</label>
+                                    <span></span>
+                                </td> 
+                                <td>
+                                    <label>{{bithistory.Rate}}</label>
+                                    <span></span>
+                                </td> 
+                                 <td>
+                                    <label>Sell</label>
+                                    <span></span>
+                                </td>
+                                
+                               
+                            </tr>
+                           
+                        </table>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.page-content -->

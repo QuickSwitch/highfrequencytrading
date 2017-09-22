@@ -1,0 +1,301 @@
+
+<div class="breadcrumbs" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#">Home</a>
+        </li>
+        <li class="active">Dashboard</li>
+    </ul>
+</div>
+<div class="page-content">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-10 col-sm-offset-1">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                            <i class="icon-coffee green"></i>
+                            Welcome High Frequency Trading
+                        </h4>
+                        <table id="" class="table table-bordered table-striped table-condensed table-responsive">
+                            <tr>
+                                <td>
+                                    <label>Username : </label>
+                                    <span>{{account.username}}</span>
+                                </td>
+                                
+                            </tr> 
+                            <tr>
+                                <td>
+                                    <label> <a ng-click="logout();">Logout</a></label>
+
+                                </td>
+                            </tr>
+                        </table>
+<section>
+    
+<div class="row">
+  
+
+    <div class="col-md-3 text-center">
+    <a href="#/gdax" style="width:100%" class="btn btn-success fs" disabled >GDAX</a>
+    </div>
+
+    <div class="col-md-6 text-center">
+    </div>
+
+      <div class="col-md-3 text-center" style="">
+    <a href="#/bittrex" style="width:100%"  class="btn btn-success fs" disabled>Bittrex</a>
+
+    </div>
+    
+
+</div>
+
+</section>
+<section>
+                        <div class="row" style="margin-top:10px; ">
+                        <div class="col-md-3 cdclass">
+                        GDAX
+                        </div>
+                        <div class="col-md-6">
+
+                        </div>
+                        <div class="col-md-3 cdclass">
+                        Bittrex
+                        </div>
+                        </div>
+
+                        <div class="row">
+                        <div class="col-md-3 cdclass">
+                        BTC Price <b>({{getresult.gdaxbid}})</b>
+                        </div>
+                        <div class="col-md-6 cdclass2">
+{{getresult.percentChange}}% difference
+                        </div>
+                        <div class="col-md-3 cdclass">
+                        BTC Price <b>({{getresult.bittrexbid}})</b>
+                        </div>
+                        
+                        </div>
+
+
+
+                        <div class="row">
+                        <div class="col-md-3 cdclass">
+                        ETH Price <b>({{getresult1.gdaxbid}})</b>
+                        </div>
+                        <div class="col-md-6 cdclass2">
+{{getresult1.percentChange}}% difference
+                        </div>
+                        <div class="col-md-3 cdclass">
+                        ETH Price <b>({{getresult1.bittrexbid}})</b>
+                        </div>
+
+                       
+                        </div>
+
+
+
+
+                        <div class="row">
+                        <div class="col-md-3 cdclass">
+                        LTC Price <b>({{getresult2.gdaxbid}})</b>
+                        </div>
+                        <div class="col-md-6 cdclass2">
+{{getresult2.percentChange}}% difference
+                        </div>
+                        <div class="col-md-3 cdclass">
+                        LTC Price <b>({{getresult2.bittrexbid}})</b>
+                        </div>
+                        </div>
+
+
+
+                        </section>
+
+
+
+
+
+<section>
+    
+<div class="row">
+  
+
+    
+    <div class="col-md-3 text-center" style="">
+    <a href="#/bittrex" style="width:100%" class="btn btn-success fs" disabled>Gemini</a>
+
+    </div>
+    <div class="col-md-6 text-center" style="">
+  
+    </div>
+
+    <div class="col-md-3 text-center" style="">
+    <a href="#/bittrex" style="width:100%" class="btn btn-success fs" disabled>BitFinex</a>
+
+    </div>
+
+</div>
+
+</section>
+<section>
+                        <div class="row" style="margin-top:10px; ">
+                        <div class="col-md-3 cdclass">
+                        Gemini
+                        </div>
+                        <div class="col-md-6">
+
+                        </div>
+                        <div class="col-md-3 cdclass">
+                        BitFinex
+                        </div>
+                        </div>
+
+                        <div class="row">
+                        <div class="col-md-3 cdclass">
+                        BTC Price <b>({{getresult.gembid}})</b>
+                        </div>
+    <div class="col-md-6 cdclass2">
+{{getresult.percentChange3}}% difference
+                        </div>
+                    
+                       
+                        <div class="col-md-3 cdclass">
+                        BTC Price <b>({{getresult.bitfinexbid}})</b>
+                        </div>
+                       
+                        
+                        </div>
+
+
+
+                        <div class="row">
+                        <div class="col-md-3 cdclass">
+                        ETH Price <b>({{getresult1.gembid}})</b>
+                        </div>
+    <div class="col-md-6 cdclass2">
+{{getresult1.percentChange3}}% difference
+                        </div>
+                    
+                       
+                        <div class="col-md-3 cdclass">
+                        ETH Price <b>({{getresult1.bitfinexbid}})</b>
+                        </div>
+                       
+                       
+                        </div>
+
+
+
+
+                        <div class="row">
+                        <div class="col-md-3 cdclass">
+                        LTC Price <b>({{getresult2.gembid}})</b>
+                        </div>
+    <div class="col-md-6 cdclass2">
+{{getresult2.percentChange3}}% difference
+                        </div>
+                    
+                       
+
+                        <div class="col-md-3 cdclass">
+                        LTC Price <b>({{getresult2.bitfinexbidbww}})</b>
+                        </div>
+                       
+                        </div>
+
+
+
+                        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <section>
+                        <div  class="row">
+                            <div class="col-md-12 cdclass">
+When price is higher GDAX
+
+                            </div>
+                            </div>
+
+                            <div class="row">
+
+                            <div class="col-md-4 cdclass">
+
+Bittrex
+</div>
+
+                      <div class="col-md-4">
+
+
+</div>
+
+                <div class="col-md-4 cdclass">
+
+GDAX
+</div>
+
+                            </div>
+
+<div class="row">
+<div class="col-md-4 cdclass">
+Buy LTC
+
+
+
+</div>
+
+
+<div class="col-md-4 cdclass">
+Send to GDAX
+
+
+
+</div>
+
+
+
+<div class="col-md-4 cdclass">
+Sell LTC
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+                        </section>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page-content -->

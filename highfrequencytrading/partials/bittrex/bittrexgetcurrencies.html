@@ -1,0 +1,89 @@
+
+<div class="breadcrumbs" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#">Home</a>
+		</li>
+		<li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#/dashboard">Dashboard</a>
+		</li>
+		<li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#/bittrex">Bit Trex</a>
+		</li>
+        <li class="active">Bit Trex Currencies</li>
+	</ul>
+</div>
+<div class="page-content">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-10 col-sm-offset-1">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                            <i class="icon-coffee green"></i>
+                           Bit Trex Currencies Data
+						</h4>
+                       <table id="" class="table table-bordered table-striped table-condensed table-responsive">
+							<tr>
+								<td>
+                                    <label>Currency</label>
+                                    <span></span>
+								</td>
+                                <td>
+                                    <label>Long</label>
+                                    <span></span>
+								</td>
+								<td>
+                                    <label>Min Confirmation</label>
+                                    <span></span>
+								</td>
+								<td>
+                                    <label>Coin Type</label>
+                                    <span></span>
+								</td>
+                                <td>
+                                    <label>Action</label>
+                                    <span></span>
+                                </td>
+								
+							</tr>
+                            <tr ng-repeat="bitcurrncy in getresult">
+                                <td>
+                                    <label>{{bitcurrncy.Currency}}</label>
+                                    <span></span>
+								</td> 
+								<td>
+                                    <label>{{bitcurrncy.CurrencyLong}}</label>
+                                    <span></span>
+								</td> 
+								<td>
+                                    <label>{{bitcurrncy.MinConfirmation}}</label>
+                                    <span></span>
+								</td> 
+								<td>
+                                    <label>{{bitcurrncy.CoinType}}</label>
+                                    <span></span>
+								</td> 
+                                <td><a href="#/bittrexgetwithdrawalhistory/{{bitcurrncy.Currency}}">Withdrawal History</a>
+                                <a href="#/bittrexbittrexgetdepositeaddress/{{bitcurrncy.Currency}}">Deposit Address</a>
+                                </label>
+                                    <span></span>
+                                </td> 
+							
+							</tr> 
+                            <tr>
+                             
+							</tr>
+						</table>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.page-content -->
